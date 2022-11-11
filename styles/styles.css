@@ -14,28 +14,36 @@
   --secondary-color: #f2f2f2;
 }
 
-.container {
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container-1 {
   background: var(--primary-color);
   color: var(--secondary-color);
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
 }
 
 .welcome-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 100vh;
   width: 70%;
   margin: 0 auto;
-  align-items: center;
 }
 
 .headings {
   max-width: fit-content;
   text-align: center;
+  align-self: center;
 }
 
 h1 {
   font-family: var(--primary-font);
-  font-size: 2.3vmax;
+  font-size: 2.3vw;
   letter-spacing: 1.5px;
 
   margin: 0 0 15px;
@@ -43,7 +51,7 @@ h1 {
 
 h2 {
   font-family: var(--secondary-font);
-  font-size: 6vmax;
+  font-size: 6vw;
   line-height: 1;
 
   margin: 0;
@@ -55,12 +63,53 @@ h2 {
   padding: 0;
 
   font-family: var(--secondary-font);
-  font-size: 1.3vmax;
+  font-size: 1.3vw;
   line-height: 1.3;
   letter-spacing: 3px;
   text-align: right;
 }
 
-.portrait {
-  margin-top: 10%;
+.photo {
+  align-self: end;
+}
+
+.container-2 {
+  display: flex;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  margin-top: -5vw;
+  clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+  height: 100%;
+  align-items: center;
+}
+
+.about-me-section {
+  width: 70%;
+  margin: 0 auto;
+}
+
+h3 {
+  font-family: var(--secondary-font);
+  text-align: center;
+  font-size: 6vmax;
+  line-height: 1;
+
+  margin: 0 auto 50px;
+}
+
+p {
+  font-family: var(--primary-font);
+  width: 60%;
+  margin: 0;
+}
+
+.first-paragraph {
+  float: left;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.second-paragraph {
+  float: right;
+  text-align: right;
 }
